@@ -2,18 +2,87 @@
 import Header from "../defaults/Header.astro";
 ---
 
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+    rel="stylesheet"
+  />
+</head>
 <div class="hero">
   <Header />
+  <div class="content">
+    <div class="subclass">
+      <span>Welcome to</span>
+      <h2>Pato Place</h2>
+      <button>Look Menu</button>
+    </div>
+
+    <div class="carousel">
+      <div class="carousel-item"></div>
+      <div class="carousel-item"></div>
+      <div class="carousel-item"></div>
+    </div>
+  </div>
 </div>
 
 <style>
   .hero {
-    background-image: url("/public/assets/hero_one.jpg");
+    background-image: url("/public/assets/hero_three.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    color: white;
+  }
+
+  .content .subclass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content span {
+    font-size: 60px;
+    font-weight: 400;
+    font-family: "Courgette", cursive;
+  }
+
+  .content h2 {
+    font-weight: 900;
+    font-size: 90px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 20px;
+  }
+
+  button {
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 30px;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #ee2020;
+    text-transform: uppercase;
   }
 </style>
