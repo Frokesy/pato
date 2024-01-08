@@ -23,90 +23,192 @@ import Head from "../defaults/Head.astro";
     </div>
   </div>
 
-  <div class="sub-container">
-    <img src="/assets/section_one.jpg" alt="section_one" class="bg-scroll" />
-    <div class="sub-content">
-        <h2>Hello world</h2>
+  <div class="parallax">
+    <div class="parallax-content">
+      <span class="header-text">Discover</span>
+      <h2>Pato Place</h2>
     </div>
   </div>
+
+  <div class="mini-gallery">
+    <div class="card">
+      <div class="img-container">
+        <img src="/assets/restaurant.jpg" alt="restaurant" />
+      </div>
+      <div class="card-content">
+        <h2>Romantic Restaurant</h2>
+        <p>
+          Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
+        </p>
+        <button>Learn More</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img-container">
+        <img src="/assets/food.jpg" alt="food" />
+      </div>
+      <div class="card-content">
+        <h2>Delicious Food</h2>
+        <p>
+          Aliquam eget aliquam magna, quis posuere risus ac justo ipsum nibh
+          urna
+        </p>
+        <button>Learn More</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img-container">
+        <img src="/assets/red_wine.jpg" alt="red_wine" />
+      </div>
+      <div class="card-content">
+        <h2>Red wines you love</h2>
+        <p>
+          If you adorn the ligula eget tortor tempor, quis porta tellus dictum.
+        </p>
+        <button>Learn More</button>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .wrapper {
+      background: #efefef;
+    }
+    .container {
+      width: 70vw;
+      margin: 0 auto;
+      padding-top: 120px;
+      padding-bottom: 120px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .content {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .content .header-text,
+    .parallax-content .header-text {
+      color: #ee2020;
+      font-size: 30px;
+      font-weight: 500;
+      font-family: "Courgette", cursive;
+    }
+
+    .content h2,
+    .parallax-content h2 {
+      font-weight: 900;
+      font-size: 50px;
+      text-transform: uppercase;
+      font-family: "Poppins", sans-serif;
+      letter-spacing: 6px;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      text-align: center;
+      color: #808080;
+      margin-bottom: 20px;
+    }
+
+    .img-div {
+      width: 390px;
+      height: 390px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    button {
+      border: none;
+      outline: none;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .parallax {
+      position: relative;
+      min-height: 392px;
+      color: #fff;
+      z-index: 1;
+    }
+
+    .parallax::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("/public/assets/img_parallax.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+    }
+
+    .parallax-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 135px;
+      padding-bottom: 158px;
+      z-index: 1;
+    }
+
+    .mini-gallery {
+      display: flex;
+      justify-content: space-between;
+      width: 80vw;
+      margin: 0 auto;
+      padding-top: 120px;
+      padding-bottom: 150px;
+    }
+
+    .card {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mini-gallery .img-container {
+      width: 370px;
+      height: 220px;
+    }
+
+    .mini-gallery .img-container img {
+      border-radius: 10px;
+    }
+
+    .mini-gallery .img-container img:hover {
+        transform: scale(1.1);
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;
+    }
+
+    .card .card-content h2 {
+        font-size: 22px;
+        font-weight: 400;
+        padding-top: 30px;
+        text-transform: uppercase;
+        font-family: "Poppins", sans-serif;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+    }
+
+    .card .card-content p {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+  </style>
 </div>
-
-<style>
-  .wrapper {
-    background: #efefef;
-  }
-  .container {
-    width: 70vw;
-    margin: 0 auto;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .content {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .content .header-text {
-    color: #ee2020;
-    font-size: 30px;
-    font-weight: 500;
-    font-family: "Courgette", cursive;
-  }
-
-  .content h2 {
-    font-weight: 900;
-    font-size: 50px;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    letter-spacing: 6px;
-    margin-bottom: 20px;
-  }
-
-  .content p {
-    text-align: center;
-    color: #808080;
-    margin-bottom: 20px;
-  }
-
-  .img-div {
-    width: 390px;
-    height: 390px;
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
-
-  button {
-    border: none;
-    outline: none;
-    font-size: 14px;
-    text-transform: uppercase;
-  }
-
-  .bg-scroll {
-    height: 600px;
-    animation: bgScroll 60s linear infinite;
-  }
-
-  .sub-container {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-  }
-
-  .sub-content {
-    position: absolute;
-    top: 300px;
-    width: 100%;
-    background-color: #fff;
-  }
-</style>
