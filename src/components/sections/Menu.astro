@@ -1,0 +1,183 @@
+---
+import Head from "../defaults/Head.astro";
+---
+
+<Head />
+<div class="wrapper">
+  <h2 class="header-text">Discover</h2>
+  <p class="subtext">Our Menu</p>
+
+  <div class="img-collection">
+    <div class="collection-one">
+      <div class="menu-one menu">
+        <button>Lunch</button>
+      </div>
+      <div class="menu-two menu">
+        <button>Dinner</button>
+      </div>
+      <div class="img-container col">
+        <div class="menu-three menu">
+          <button>Drink</button>
+        </div>
+        <div class="menu-four menu">
+          <button>Starters</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="collection-two">
+      <div class="menu-five menu">
+        <button>Happy Hour</button>
+      </div>
+      <div class="menu-six menu">
+        <button>Dessert</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .wrapper {
+    background: #f5f2ec;
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  .header-text {
+    color: #ee2020;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Courgette", cursive;
+  }
+
+  .subtext {
+    font-weight: 900;
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+  }
+
+  .img-collection {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  .img-collection .collection-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 495px;
+    padding-top: 50px;
+  }
+
+  .menu-one {
+    background: url("/assets/menu_one.jpg");
+    height: 100%;
+    width: 30%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .menu:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .menu-two {
+    background: url("/assets/menu_two.jpg");
+    height: 100%;
+    width: 30%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  .menu-three {
+    background: url("/public/assets/menu_three.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  .menu-four {
+    background: url("/public/assets/menu_four.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 47%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  .menu-five {
+    background: url("/assets/menu_five.jpg");
+    height: 100%;
+    width: 65%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  .menu-six {
+    background: url("/assets/menu_six.jpg");
+    height: 100%;
+    width: 30%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  .col {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+  }
+
+  button {
+    background: #fff;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: "Poppins", sans-serif;
+    padding: 10px 60px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #333;
+  }
+
+  .collection-two {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    height: 230px;
+  }
+</style>
