@@ -1,7 +1,9 @@
 ---
 import Head from "../defaults/Head.astro";
 ---
-
+<head>
+  <link rel="stylesheet" href="/styles/events.css" />
+</head>
 <Head />
 <div class="main-container">
   <div class="header">
@@ -14,72 +16,3 @@ import Head from "../defaults/Head.astro";
     <div class="sub-content"></div>
   </div>
 </div>
-
-<style>
-  .main-container {
-    position: relative;
-    min-height: 860px;
-    color: #fff;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .main-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-      url("/assets/img_parallax.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
-  }
-
-  .header {
-    text-align: center;
-  }
-  .header .header-text {
-    color: #ee2020;
-    font-size: 30px;
-    font-weight: 500;
-    font-family: "Courgette", cursive;
-  }
-
-  .header h2 {
-    font-weight: 900;
-    font-size: 50px;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    letter-spacing: 6px;
-    margin-bottom: 20px;
-  }
-
-  .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin-top: 50px;
-  }
-
-  .sub-content {
-    background-color: #fff;
-    display: flex;
-    height: 390px;
-    width: 585px;
-    border-radius: 0px 10px 10px 0px;
-  }
-
-  img {
-    height: 390px;
-    width: 585px;
-    border-radius: 10px 0px 0px 10px;
-  }
-</style>
