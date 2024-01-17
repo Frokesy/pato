@@ -2,9 +2,6 @@
 import Head from "../defaults/Head.astro";
 ---
 
-<head>
-  <link rel="stylesheet" href="/styles/section-one.css" />
-</head>
 <Head />
 <div class="wrapper">
   <div class="container">
@@ -76,3 +73,151 @@ import Head from "../defaults/Head.astro";
     </div>
   </div>
 </div>
+
+<style>
+  .wrapper {
+    background: #efefef;
+  }
+  .container {
+    width: 70vw;
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content .header-text,
+  .parallax-content .header-text {
+    color: #ee2020;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Courgette", cursive;
+  }
+
+  .content h2,
+  .parallax-content h2 {
+    font-weight: 900;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+  }
+
+  .content p {
+    text-align: center;
+    color: #808080;
+    margin-bottom: 20px;
+  }
+
+  .img-div {
+    width: 390px;
+    height: 390px;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  button {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  .parallax {
+    position: relative;
+    min-height: 392px;
+    color: #fff;
+    z-index: 1;
+  }
+
+  .parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url("/assets/img_parallax.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .parallax-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 135px;
+    padding-bottom: 158px;
+    z-index: 1;
+  }
+
+  .mini-gallery-wrapper {
+    background: #fff;
+  }
+
+  .mini-gallery {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-bottom: 150px;
+  }
+
+  .card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mini-gallery .img-container {
+    width: 370px;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .mini-gallery .img-container img, .img-div {
+    border-radius: 10px;
+  }
+
+  .mini-gallery .img-container img:hover, .img-div img:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .card .card-content h2 {
+    font-size: 22px;
+    font-weight: 400;
+    padding-top: 30px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+  }
+
+  .card .card-content p {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+</style>
