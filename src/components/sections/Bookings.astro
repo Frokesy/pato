@@ -1,9 +1,154 @@
 ---
 import Head from "../defaults/Head.astro";
-
 ---
 
 <Head />
-<div class="main-container">
-    <h2>Hello world, here is the reservation center</h2>
+<div class="wrapper">
+  <div class="main-container">
+    <div class="section-one">
+      <h2 class="header-text">Reservation</h2>
+      <p class="subtext">Book Table</p>
+      <form class="form-container">
+        <div class="input-field">
+          <div class="form-section">
+            <label for="date">Date</label>
+            <input type="date" id="date" />
+          </div>
+          <div class="form-section">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Name" />
+          </div>
+          <div class="form-section">
+            <label for="Time">Time</label>
+            <input type="time" id="time" />
+          </div>
+          <div class="form-section">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="Phone" />
+          </div>
+          <div class="form-section">
+            <label for="people">People</label>
+            <select name="people" id="people">
+              <option value="1">1 person</option>
+              <option value="2">2 people</option>
+              <option value="3">3 people</option>
+              <option value="4">4 people</option>
+              <option value="5">5 people</option>
+              <option value="6">6 people</option>
+              <option value="7">7 people</option>
+              <option value="8">8 people</option>
+              <option value="9">9 people</option>
+              <option value="10">10 people</option>
+              <option value="11">10+ people</option>
+            </select>
+          </div>
+          <div class="form-section">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email" />
+          </div>
+        </div>
+        <div class="btn">
+          <button type="submit">Book Table</button>
+        </div>
+      </form>
+    </div>
+    <div class="section-two">
+      <img src="/assets/booking.jpg" alt="booking" />
+    </div>
+  </div>
 </div>
+
+<style>
+  .wrapper {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #efefef;
+  }
+
+  .main-container {
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .section-one {
+    width: 60%;
+  }
+
+  .section-two {
+    width: 35%;
+    border-radius: 10px;
+  }
+
+  img {
+    width: 100%;
+    border-radius: inherit;
+  }
+
+  .header-text {
+    color: #ee2020;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Courgette", cursive;
+  }
+
+  .subtext {
+    font-weight: 900;
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+  }
+
+  .input-field {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px 40px;
+  }
+
+  .form-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-section label {
+    margin-bottom: 10px;
+    padding-left: 4px;
+    font-size: 15px;
+    color: #555;
+  }
+
+  .form-section input,
+  select {
+    padding: 0 15px;
+    height: 48px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #fff;
+  }
+
+  .form-section input:focus,
+  select:focus {
+    border: #ee2020 3px solid;
+  }
+
+  .form-container .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  button {
+    background: #000;
+    color: #fff;
+    margin-top: 30px;
+    padding: 10px 60px;
+    border-radius: 10px;
+  }
+</style>
