@@ -1,5 +1,6 @@
 ---
 import Head from "../defaults/Head.astro";
+import Card from "./Card.astro";
 ---
 
 <Head />
@@ -29,47 +30,27 @@ import Head from "../defaults/Head.astro";
       <h2>Pato Place</h2>
     </div>
   </div>
-
   <div class="mini-gallery-wrapper">
     <div class="mini-gallery">
-      <div class="card">
-        <div class="img-container">
-          <img src="/assets/restaurant.jpg" alt="restaurant" />
-        </div>
-        <div class="card-content">
-          <h2>Romantic Restaurant</h2>
-          <p>
-            Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-          </p>
-          <button>Learn More</button>
-        </div>
-      </div>
-      <div class="card">
-        <div class="img-container">
-          <img src="/assets/food.jpg" alt="food" />
-        </div>
-        <div class="card-content">
-          <h2>Delicious Food</h2>
-          <p>
-            Aliquam eget aliquam magna, quis posuere risus ac justo ipsum nibh
-            urna
-          </p>
-          <button>Learn More</button>
-        </div>
-      </div>
-      <div class="card">
-        <div class="img-container">
-          <img src="/assets/red_wine.jpg" alt="red_wine" />
-        </div>
-        <div class="card-content">
-          <h2>Red wines you love</h2>
-          <p>
-            If you adorn the ligula eget tortor tempor, quis porta tellus
-            dictum.
-          </p>
-          <button>Learn More</button>
-        </div>
-      </div>
+      <Card
+        imgPath="/assets/restaurant.jpg"
+        cardHeader="Romantic Restaurant"
+        cardText="Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros."
+        buttonText="Learn More"
+      />
+
+      <Card
+        imgPath="/assets/food.jpg"
+        cardHeader="Delicious Food"
+        cardText="Aliquam eget aliquam magna, quis posuere risus ac justo ipsum nibh urna"
+        buttonText="Learn More"
+      />
+      <Card
+        imgPath="/assets/red_wine.jpg"
+        cardHeader="Red wines you love"
+        cardText="If you adorn the ligula eget tortor tempor, quis porta tellus dictum."
+        buttonText="Learn More"
+      />
     </div>
   </div>
 </div>
@@ -182,42 +163,5 @@ import Head from "../defaults/Head.astro";
     margin: 0 auto;
     padding-top: 120px;
     padding-bottom: 150px;
-  }
-
-  .card {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .mini-gallery .img-container {
-    width: 370px;
-    height: 220px;
-    overflow: hidden;
-  }
-
-  .mini-gallery .img-container img, .img-div {
-    border-radius: 10px;
-  }
-
-  .mini-gallery .img-container img:hover, .img-div img:hover {
-    transform: scale(1.1);
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-  }
-
-  .card .card-content h2 {
-    font-size: 22px;
-    font-weight: 400;
-    padding-top: 30px;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
-  }
-
-  .card .card-content p {
-    font-size: 15px;
-    margin-bottom: 20px;
   }
 </style>

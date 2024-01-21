@@ -1,0 +1,71 @@
+---
+import Head from "../defaults/Head.astro";
+
+const { cardHeader, cardText, buttonText, imgPath } = Astro.props;
+---
+
+<Head />
+
+<div class="card">
+  <div class="img-container">
+    <img src={imgPath} alt="restaurant" />
+  </div>
+  <div class="card-content">
+    <h2>{cardHeader}</h2>
+    <p>{cardText}</p>
+    <button>{buttonText}</button>
+  </div>
+</div>
+
+<style>
+  .card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-container {
+    width: 370px;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .img-container img,
+  .img-div {
+    border-radius: 10px;
+  }
+
+  .img-container img:hover,
+  .img-div img:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .card .card-content h2 {
+    font-size: 22px;
+    font-weight: 400;
+    padding-top: 30px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+  }
+
+  .card .card-content p {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    background: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+</style>
