@@ -1,0 +1,104 @@
+---
+import Cta from "../sections/Cta.astro";
+import Email from "../svgs/Email.astro";
+import Location from "../svgs/Location.astro";
+import Phone from "../svgs/Phone.astro";
+import Head from "./Head.astro";
+---
+
+<Head />
+<div>
+  <Cta />
+  <div class="wrapper">
+    <div class="container">
+      <div>
+        <h2>Contact Us</h2>
+
+        <div class="address">
+          <div class="mini">
+            <Location />
+            <span> 8th floor, 379 Hudson St. New York, NY 10018</span>
+          </div>
+
+          <div class="mini">
+            <Phone />
+            <span>(+1) 96 716 6879</span>
+          </div>
+
+          <div class="mini">
+            <Email fill="#999999" dimension="14px" />
+            <span>contact@site.com</span>
+          </div>
+        </div>
+
+        <div class="opening-times">
+          <h2>Opening Times</h2>
+          <span>9:30 AM - 11:00 AM</span>
+          <span>Every Day</span>
+        </div>
+      </div>
+      <div>
+        <h2>Latest Twitter</h2>
+      </div>
+      <div>
+        <h2>Gallery</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .wrapper {
+    background: #222222;
+    color: #fff;
+    padding: 80px 0 50px 0;
+  }
+
+  .container {
+    width: 75vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  h2 {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 4px;
+  }
+
+  .address {
+    margin-top: 30px;
+  }
+
+  .mini {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+  }
+
+  .mini span {
+    color: #767676;
+    font-size: 13px;
+    padding-left: 14px;
+  }
+
+  .opening-times {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    color: #767676;
+    font-size: 13px;
+  }
+
+  .opening-times h2 {
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  .opening-times span {
+    padding: 8px 0;
+  }
+</style>
