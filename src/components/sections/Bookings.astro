@@ -151,4 +151,24 @@ import Head from "../defaults/Head.astro";
     padding: 10px 60px;
     border-radius: 10px;
   }
+
+  @media screen and (max-width: 720px) {
+    .main-container {
+      flex-direction: column;
+      width: 90vw;
+    }
+
+    .section-one {
+      width: 100%;
+    }
+
+    .section-two {
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    .input-field {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>

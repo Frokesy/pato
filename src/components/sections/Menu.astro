@@ -180,4 +180,37 @@ import Head from "../defaults/Head.astro";
     padding-top: 50px;
     height: 230px;
   }
+  @media screen and (max-width: 720px) {
+    .img-collection {
+      width: 90vw;
+      margin: 0 auto;
+    }
+
+    .img-collection .collection-one {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .col {
+      width: 100%;
+      align-items: center;
+    }
+
+    .collection-two {
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      padding-top: 0;
+    }
+
+    .menu {
+      width: 385px;
+      height: 240px;
+      margin-bottom: 20px;
+    }
+
+    .menu:hover {
+      transform: scale(1.0);
+    }
+  }
 </style>

@@ -111,4 +111,26 @@ import Star from "../svgs/Star.astro";
     color: #fff;
     transition: all .3s ease-in-out;
   }
+  @media screen and (max-width: 720px) {
+    .review-container {
+      flex-direction: column;
+    }
+
+    .review-subcontainer {
+      padding-top: 30px;
+    }
+
+    .review-container p {
+      width: 90%;
+    }
+
+    img {
+      width: 8rem;
+    }
+
+    .control {
+      display: none;
+      visibility: hidden;
+    }
+  }
 </style>

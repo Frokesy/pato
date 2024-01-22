@@ -1,63 +1,70 @@
 ---
 import Head from "../defaults/Head.astro";
-import Email from "../svgs/Email.astro"
-
-
+import Email from "../svgs/Email.astro";
 ---
 
 <Head />
 <div class="wrapper">
-    <span>Specials Sign up</span>
-    <div class="input-field">
-        <input type="email" placeholder="Email Address">
-        <Email fill="#000000" dimension="20px" />
-    </div>
-    <button>Sign-Up</button>
+  <span>Specials Sign up</span>
+  <div class="input-field">
+    <input type="email" placeholder="Email Address" />
+    <Email fill="#000000" dimension="20px" />
+  </div>
+  <button>Sign-Up</button>
 </div>
 
 <style>
-    .wrapper {
-        background: #eee;
-        width: 100%;
-        padding: 80px 0 80px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .wrapper {
+    background: #eee;
+    width: 100%;
+    padding: 80px 0 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    span {
-        font-size: 22px;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        font-weight: 900;
-        font-family: "Poppins", sans-serif;
+  span {
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 900;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .input-field {
+    margin: 0 20px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    min-width: 267px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  .input-field input {
+    border: none;
+    outline: none;
+  }
+
+  button {
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    margin-left: 10px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border-radius: 10px;
+  }
+  @media screen and (max-width: 720px) {
+    .wrapper {
+      flex-direction: column;
     }
 
     .input-field {
-        margin: 0 20px 0 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 15px;
-        min-width: 267px;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        background-color: #fff;
+      margin: 20px 0 20px 0;
     }
-
-    .input-field input {
-        border: none;
-        outline: none;
-    }
-
-    button {
-        background: #000;
-        color: #fff;
-        text-transform: uppercase;
-        padding: 10px 40px;
-        margin-left: 10px;
-        font-size: 12px;
-        letter-spacing: 3px;
-        border-radius: 10px;
-    }
+  }
 </style>
