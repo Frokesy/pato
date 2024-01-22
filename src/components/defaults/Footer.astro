@@ -3,6 +3,7 @@ import Cta from "../sections/Cta.astro";
 import Email from "../svgs/Email.astro";
 import Location from "../svgs/Location.astro";
 import Phone from "../svgs/Phone.astro";
+import Twitter from "../svgs/Twitter.astro";
 import Head from "./Head.astro";
 ---
 
@@ -39,9 +40,72 @@ import Head from "./Head.astro";
       </div>
       <div>
         <h2>Latest Twitter</h2>
+        <div class="content">
+          <div class="mini">
+            <Twitter />
+            <span>@colorlib</span>
+          </div>
+          <p>
+            Activello is a good option. It has a slider built into that displays
+            the featured image in the slider. <a href="https://buff.ly/2zaSfAQ">
+              https://buff.ly/2zaSfAQ</a
+            >
+          </p>
+          <span class="date">21 Dec, 2017.</span>
+        </div>
+
+        <div class="content">
+          <div class="mini">
+            <Twitter />
+            <span>@colorlib</span>
+          </div>
+          <p>
+            Activello is a good option. It has a slider built into that displays
+            <a href="https://buff.ly/2zaSfAQ"> https://buff.ly/2zaSfAQ</a>
+          </p>
+          <span class="date">21 Dec, 2017.</span>
+        </div>
       </div>
       <div>
         <h2>Gallery</h2>
+        <div class="gallery">
+          <div class="item">
+            <img src="/assets/menu_five.jpg" alt="img" />
+          </div>
+          <div class="item">
+            <img src="/assets/blog-01.jpg" alt="img" />
+          </div>
+          <div class="item">
+            <img src="/assets/booking.jpg" alt="img" />
+          </div>
+          <div class="item">
+            <img src="/assets/blog-02.jpg" alt="img" />
+          </div>
+          <div class="item">
+            <img src="/assets/menu_one.jpg" alt="img" />
+          </div>
+          <div class="item">
+            <img src="/assets/blog-03.jpg" alt="img" />
+          </div>
+          <div class="item">
+            <img src="/assets/red_wine.jpg" alt="img" />
+          </div>
+          <div class="item">
+            <img src="/assets/menu_two.jpg" alt="img" />
+          </div>
+          <div class="item">
+            <img src="/assets/menu_three.jpg" alt="img" />
+          </div>
+          <div class="item">
+            <img src="/assets/menu_six.jpg" alt="img" />
+          </div>
+          <div class="item">
+            <img src="/assets/menu_four.jpg" alt="img" />
+          </div>
+          <div class="item">
+            <img src="/assets/img_one.jpg" alt="img" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -99,6 +163,45 @@ import Head from "./Head.astro";
   }
 
   .opening-times span {
-    padding: 8px 0;
+    padding: 4px 0;
+  }
+
+  .content {
+    margin-top: 30px;
+    width: 80%;
+  }
+
+  .content .mini span,
+  a {
+    color: #ee2020;
+  }
+
+  .content p {
+    font-size: 13px;
+    color: #767676;
+    padding-bottom: 30px;
+  }
+
+  .date {
+    color: #555;
+    font-size: 12px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 30px;
+  }
+
+  .gallery .item {
+    height: 80px;
+    width: 80px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 </style>

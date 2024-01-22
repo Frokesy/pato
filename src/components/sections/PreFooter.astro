@@ -118,8 +118,10 @@ import Card from "./Card.astro";
   }
 
   .mini-gallery {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    grid-gap: 20px;
     width: 75vw;
     margin: 0 auto;
     padding-top: 120px;
